@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio"
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,7 @@
     "@wdio/mocha-framework": "^5.23.0",
     "@wdio/spec-reporter": "^5.23.0",
     "@wdio/sync": "^5.23.0",
-    "chromedriver": "^78.0.1",
+    "chromedriver": "^83.0.0",
     "eslint": "^6.6.0",
     "eslint-plugin-wdio": "^5.13.2",
     "prettier": "^1.18.2",
