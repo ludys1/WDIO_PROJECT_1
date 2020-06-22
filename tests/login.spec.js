@@ -107,7 +107,7 @@ describe('Login Test Suite', () => {
     assert.equal(LoginPage.rememberLoginCheckBox.isSelected(), true, 'Checkbox is not selected');
   });
 
-  it.only('should not remember login creds', () => {
+  it('should not remember login creds', () => {
     browser.url('');
     LoginPage.emailField.setValue('1@2.com');
     LoginPage.passwordField.setValue('password');

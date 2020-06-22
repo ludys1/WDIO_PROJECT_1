@@ -12,7 +12,7 @@ describe('Intro Test Suite', () => {
     assert.equal(IntroPage.titleText.getText(), 'Superhero Roster', 'Title text is not allgood');
   });
 
-  it.only('should display correct image', () => {
+  it('should display correct image', () => {
     browser.url('');
     LoginPage.emailField.setValue('1@2.com');
     LoginPage.passwordField.setValue('password');
