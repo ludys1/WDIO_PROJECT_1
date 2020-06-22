@@ -106,4 +106,17 @@ describe('Login Test Suite', () => {
     assert.equal(LoginPage.passwordField.getValue(), 'password', 'value is not the same');
     assert.equal(LoginPage.rememberLoginCheckBox.isSelected(), true, 'Checkbox is not selected');
   });
+
+  it.only('should not remember login creds', () => {
+    browser.url('');
+    LoginPage.emailField.setValue('1@2.com');
+    LoginPage.passwordField.setValue('password');
+    LoginPage.submitButton.click();
+    HeaderPage.logoutLink.click();
+    assert.equal(LoginPage.overlay.isDisplayed(), true, 'Overlay is not displayed');
+    assert.equal(LoginPage.emailField.getValue(), '', 'value is not the same');
+    assert.equal(LoginPage.passwordField.getValue().length, '0', 'value is not the same');
+    assert.equal(LoginPage.rememberLoginCheckBox.isSelected(), false, 'Checkbox is selected');
+    browser.pause(500);
+  });
 });
