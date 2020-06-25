@@ -37,6 +37,12 @@ class LoginPage {
   get navBar() {
     return $('body > div.row > div > nav > button > span');
   }
+  signIn(email, password) {
+    browser.url('');
+    this.emailField.setValue(email);
+    this.passwordField.setValue(password);
+    this.submitButton.click();
+  }
 }
 
 module.exports = new LoginPage();

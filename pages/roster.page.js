@@ -42,6 +42,10 @@ class RosterPage {
   get addedHeroStarLord() {
     return $('#hero-list > li:nth-child(6)');
   }
+
+  get rosterItems() {
+    return $$('#hero-list > li');
+  }
 }
 
 module.exports = new RosterPage();
